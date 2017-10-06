@@ -8,3 +8,6 @@ Here's a list:
 + **MinCut**: an algorithm that operates on a graph to calculate the minumun number of edges that can divide the graph in 2.
 + **Counting**: An algorithm to find two values in an array that sum up to a desired value
 + **Bit Manipulation**: some routines for manipulating bits
++ **SCC**: The Strongly Connected Component algorithm
++ **itoa**: algorithms for both atoi() and itoa()
++ **reverse**: algorithm to reverse a number, considering overflow 
