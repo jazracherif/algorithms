@@ -6,7 +6,7 @@ Here's a list from the coursera class:
 + **Inversion**: Find the number of inversions in an array: uses mergesort as a basis
 + **quicksort**: an implementation of quicksort
 + **MinCut**: an algorithm that operates on a graph to calculate the minimun number of edges that can divide the graph in 2.
-+ **SCC**: The Strongly Connected Component algorithm
++ **SCC**: Find the Strongly Connected Components in a directed graph using Breadth Depth Search
 + **djikstra**: Djikstra's Shortest Path Algorithm
 
 Other Algorithms and routines:
