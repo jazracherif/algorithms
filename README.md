@@ -1,5 +1,5 @@
 # Algorithms
-Python implementation of a number of algorithms, any of which (but not all) are homeworks taken from the [Coursera Specialization](https://www.coursera.org/specializations/algorithms) by Tim Roughgarden at Stanford. 
+Python implementation of a number of algorithms, some of which (but not all) are homeworks taken from the [Coursera Specialization](https://www.coursera.org/specializations/algorithms) by Tim Roughgarden at Stanford. 
 
 Here's a list from the coursera class:
 + **Karatsuba**: a faster algorithm for multiplication
