@@ -8,6 +8,10 @@ Here's a list from the coursera class:
 + **MinCut**: an algorithm that operates on a graph to calculate the minimun number of edges that can divide the graph in 2.
 + **SCC**: Find the Strongly Connected Components in a directed graph using Breadth Depth Search
 + **djikstra**: Djikstra's Shortest Path Algorithm
++ **prim**: The PRIM Minimim Spanning Tree algorithm
++ **schedule**: A Greedy algorithm for a scheduling task given weight and completion times for a series of jobs
++ **median-maintenance**: median-maintenance algorithm using a min-heap and a max-heap
++ **2-sum**: 2-sum algorithm where the value is in a range
 
 Other Algorithms and routines:
 + **Bit Manipulation**: some routines for manipulating bits
@@ -15,3 +19,4 @@ Other Algorithms and routines:
 + **itoa**: algorithms for both atoi() and itoa()
 + **reverse**: algorithm to reverse a number, considering overflow
 + **Container**: Find the Container With Most Water given a list of values corresponding to container edges.
++ **fastpath**: A Dynamic Programming Algorithm to find the fastest path in an array where each index value consists of allowed look-ahead steps
