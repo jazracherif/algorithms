@@ -12,6 +12,7 @@ Here's a list from the coursera class:
 + **schedule**: A Greedy algorithm for a scheduling task given weight and completion times for a series of jobs
 + **median-maintenance**: median-maintenance algorithm using a min-heap and a max-heap
 + **2-sum**: 2-sum algorithm where the value is in a range
++ **clustering**: Max-spacing clustering algorithms using kruskal's algorithm with a Union-Find data structure
 
 Other Algorithms and routines:
 + **Bit Manipulation**: some routines for manipulating bits
