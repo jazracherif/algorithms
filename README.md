@@ -13,6 +13,8 @@ Here's a list from the coursera class:
 + **median-maintenance**: median-maintenance algorithm using a min-heap and a max-heap
 + **2-sum**: 2-sum algorithm where the value is in a range
 + **clustering**: Max-spacing clustering algorithms using kruskal's algorithm with a Union-Find data structure
++ **huffman**: The Huffman variable encoding algorithmalgorithm
++ **mwis**: The Maximum Weighted Independent Set Algorithm using Dynamic Programming
 
 Other Algorithms and routines:
 + **Bit Manipulation**: some routines for manipulating bits
