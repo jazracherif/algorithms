@@ -15,6 +15,7 @@ Here's a list from the coursera class:
 + **clustering**: Max-spacing clustering algorithms using kruskal's algorithm with a Union-Find data structure
 + **huffman**: The Huffman variable encoding algorithmalgorithm
 + **mwis**: The Maximum Weighted Independent Set Algorithm using Dynamic Programming
++ **knapsack**: The Dynamic Programming implementation of the Knapsack problem
 
 Other Algorithms and routines:
 + **Bit Manipulation**: some routines for manipulating bits
