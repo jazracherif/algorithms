@@ -4,7 +4,9 @@ class TreeNode:
         self.left = left
         self.right = right  
 
-class NodeAttribute:    
+class NodeAttribute:
+    """ Descriptor Protocol to check for TreeNode Type 
+    """
     def __set_name__(self, owner, name):
         self.public_name = name
         self.private_name = '_' + name
@@ -26,6 +28,7 @@ class withVisitedNode:
 
     def __call__(self):
         return self.n
+
 
 def generateBST() -> TreeNode:
     """ Binary Search Tree

@@ -2,7 +2,6 @@ from TreeNode import TreeNode, withVisitedNode,  generateBST
 
 def dfsPreOrderIterative(root: TreeNode):
     """
-
     """
     print("Iterative - Pre Order Traversal")
 
@@ -20,7 +19,6 @@ def dfsPreOrderIterative(root: TreeNode):
 
 def dfsInOrderIterative(root: TreeNode):
     """
-
     """
     print("Iterative - In Order Traversal")
 
@@ -39,7 +37,7 @@ def dfsInOrderIterative(root: TreeNode):
         node.visited = True
         stack.append(node)
 
-        if node.n.left:
+        if node().left:
             stack.append(withVisitedNode(node().left))
     return res
 
@@ -47,7 +45,6 @@ def dfsInOrderIterative(root: TreeNode):
 def dfsPostOrderIterative(root: TreeNode):
     """
     """
-
     print("Iterative - Post Order Traversal")
 
     stack = [withVisitedNode(root)]
@@ -56,7 +53,7 @@ def dfsPostOrderIterative(root: TreeNode):
         node = stack.pop()
 
         if node.visited:
-            res.append(node.n.val)
+            res.append(node().val)
             continue
 
         node.visited = True
