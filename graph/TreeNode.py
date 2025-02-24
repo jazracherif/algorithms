@@ -1,11 +1,31 @@
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
+    def __init__(self, val=0, children=None):
         self.val = val
-        self.left = left
-        self.right = right  
+        self.children = children  
 
-class NodeAttribute:
-    """ Descriptor Protocol to check for TreeNode Type 
+
+class BinaryTreeNode(TreeNode):
+    def __init__(self, val=0, left=None, right=None):
+        children = [None, None]
+
+        if left is not None:
+            children[0] = left
+        if right is not None:
+            children[1] = right
+
+        super().__init__(val, children)
+
+    @property
+    def left(self):
+        return self.children[0]
+    
+    @property
+    def right(self):
+        return self.children[1]
+
+
+class NodeType:
+    """ Descriptor Protocol to check for TreeNode Type (https://docs.python.org/3/howto/descriptor.html)
     """
     def __set_name__(self, owner, name):
         self.public_name = name
@@ -15,12 +35,12 @@ class NodeAttribute:
         return getattr(obj, self.private_name)        
     
     def __set__(self, obj, value):
-        if not isinstance(value, TreeNode):
+        if not isinstance(value, BinaryTreeNode):
             raise ValueError(f"Wrong Value Type {value} for {self.public_name}")
         setattr(obj, self.private_name, value)
 
 class withVisitedNode:
-    n = NodeAttribute()
+    n = NodeType()
 
     def __init__(self, node):
         self.n = node
@@ -28,19 +48,3 @@ class withVisitedNode:
 
     def __call__(self):
         return self.n
-
-
-def generateBST() -> TreeNode:
-    """ Binary Search Tree
-              4
-           /     \
-          2        6
-         /  \     / \
-        1    3   5   7
-    """
-    return TreeNode(4,
-        TreeNode(2, 
-                TreeNode(1), TreeNode(3) ),
-        TreeNode(6, 
-                TreeNode(5), TreeNode(7) )
-    )        

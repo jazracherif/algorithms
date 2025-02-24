@@ -1,14 +1,18 @@
-from TreeNode import TreeNode, withVisitedNode,  generateBST
+from TreeNode import BinaryTreeNode, withVisitedNode
+from collections import deque
 
-def dfsPreOrderIterative(root: TreeNode):
+def dfsPreOrderIterative(root: BinaryTreeNode):
     """
+        Use a STACK
+         
+        current Node -> left child -> right child
     """
     print("Iterative - Pre Order Traversal")
 
     stack = [root]
     res = []
     while stack:
-        node = stack.pop()
+        node = stack.pop() 
         res.append(node.val)
         if node.right:
             stack.append(node.right)
@@ -17,8 +21,11 @@ def dfsPreOrderIterative(root: TreeNode):
     return res
 
 
-def dfsInOrderIterative(root: TreeNode):
+def dfsInOrderIterative(root: BinaryTreeNode):
     """
+        Use a STACK
+
+        left child -> current value -> right child
     """
     print("Iterative - In Order Traversal")
 
@@ -31,6 +38,7 @@ def dfsInOrderIterative(root: TreeNode):
             res.append(node().val)
             continue
 
+        # append in reverse order to get the rigth traversal: right -> current -> left (top of stack)
         if node().right:
             stack.append(withVisitedNode(node().right))
 
@@ -42,8 +50,11 @@ def dfsInOrderIterative(root: TreeNode):
     return res
 
 
-def dfsPostOrderIterative(root: TreeNode):
+def dfsPostOrderIterative(root: BinaryTreeNode):
     """
+        Use a STACK
+
+        left node -> right node -> current node
     """
     print("Iterative - Post Order Traversal")
 
@@ -56,6 +67,7 @@ def dfsPostOrderIterative(root: TreeNode):
             res.append(node().val)
             continue
 
+        # append in reverse order to get the rigth traversal: current -> right -> left (top of stack)
         node.visited = True
         stack.append(node)
 
@@ -67,7 +79,33 @@ def dfsPostOrderIterative(root: TreeNode):
         
     return res
 
-def dfsInOrderRecursive(root: TreeNode):
+def BFS(root: BinaryTreeNode):
+    """
+        Use a QUEUE
+
+        first level nodes -> second level -> .. leaf nodes
+    """
+    print("BFS")
+
+    queue = deque([root])
+    res = []
+    # take all children of the current node and put them at the *end* of the queue. then process the next element
+    while queue:
+        node = queue.popleft()
+
+        res.append(node.val)
+        
+        # since its a queue, we keep the same order as traversal
+        if node.left:
+            queue.append(node.left)
+
+        if node.right:
+            queue.append(node.right)
+        
+    return res
+
+
+def dfsInOrderRecursive(root: BinaryTreeNode):
     """
         Recursively call dfs, first on the left, then add the node's value
           then recurse on the right child
@@ -88,11 +126,3 @@ def dfsInOrderRecursive(root: TreeNode):
     res = []
     dfs(root, res)
     return res
-
-
-if __name__ == "__main__":
-    root = generateBST()
-    print(dfsInOrderRecursive(root))
-    print(dfsInOrderIterative(root))
-    print(dfsPreOrderIterative(root))
-    print(dfsPostOrderIterative(root))
